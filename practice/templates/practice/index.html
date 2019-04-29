@@ -1,0 +1,42 @@
+{% extends "practice/base.html" %}
+
+{% block content %}
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">English Exercises</h1>
+    </div>
+
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+
+        {% for quiz in quizzes %}
+        
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <a href="{% url 'practice:quiz_view' quiz.id %}"><svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#20639B"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ quiz.tema }}</text></svg></a>
+            <div class="card-body">
+              <p class="card-text">{{ quiz.descripcion }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="{% url 'practice:quiz_view' quiz.id %}"><button type="button" class="btn btn-sm btn-outline-secondary">Ver</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

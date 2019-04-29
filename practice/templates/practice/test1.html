@@ -1,0 +1,17 @@
+{% extends "cuestionario/base.html" %}
+
+<h1>{{ quiz.tema }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'cuestionario:calificar' quiz.id %}" method="post">
+{% csrf_token %}
+{% for pregunta in quiz.preguntas.all %}
+    <p>{{ pregunta.texto_pregunta }}</p>
+    {% for opcion in pregunta.opcion_set.all %}
+        <input type="radio" name="opcion" id="opcion{{ forloop.counter }}" value="{{ opcion.id }}">
+        <label for="opcion{{ forloop.counter }}">{{ opcion.texto_opcion }}</label><br>
+    {% endfor %}
+{% endfor %}
+<input type="submit" value="Calificar">
+</form>

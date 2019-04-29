@@ -1,0 +1,13 @@
+englishtutor/settings.py
+englishtutor/__pycache__
+englishtutor/wsgi.py
+manage.py
+populate_db.py
+__pycache__
+textodb2.txt
+englishtutor.sock
+myenv
+static
+textodb.txt
+practice/__pycache__
+practice/migrations
