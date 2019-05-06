@@ -21,8 +21,10 @@
   <input id="button-submit" class="btn btn-success" type="submit" value="calificar" {% if disable %}disabled{% endif %}>
   </form>
   {% if respuesta %}{{respuesta}}{% endif %}
+  {% if disable %}
+  <a href="{% url 'practice:quiz_view' quiz.id %}">Repetir quiz?</a>
+  {% endif %}
 </div>
-
 
 </div><!-- Container  -->
 {% endblock %}
