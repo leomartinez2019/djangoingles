@@ -1,6 +1,6 @@
-# Proyecto Django-Inglés
+# Proyecto Django-Test
 
-Colección de quizzes con temas de gramática y vocabulario.
+Colección de quizzes con temas python.
 
 ## Recursos:
 
@@ -14,4 +14,4 @@ Colección de quizzes con temas de gramática y vocabulario.
 - Agregar SSL
 
 ## Enlace del sitio:
-[http://django.pyflaskapp.com/](http://django.pyflaskapp.com/)
+[http://pyflaskapp.com/](http://pyflaskapp.com/)
