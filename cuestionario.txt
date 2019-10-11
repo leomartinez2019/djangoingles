@@ -1,0 +1,21 @@
+Python básico
+Nivel principiante
+?
+When was python created?
+*
+$In 1991
+In 1999
+In 2000
+?
+Python is an object oriented language
+*
+$True
+False
+?
+A method to add elements to a list is
+*
+pop
+push
+$append
+!
+
